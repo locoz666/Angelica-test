@@ -43,7 +43,7 @@ public class AngelicaTweaker implements IFMLLoadingPlugin, IEarlyMixinLoader {
             LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
             Configuration config = ctx.getConfiguration();
             LoggerConfig loggerConfig = config.getLoggerConfig(LogManager.ROOT_LOGGER_NAME);
-            loggerConfig.setLevel(Level.DEBUG)
+            loggerConfig.setLevel(Level.DEBUG);
             ctx.updateLoggers();
 
             // Too many bug reports because people refuse to read or just want to try it - so make these only able

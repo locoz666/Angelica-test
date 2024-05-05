@@ -61,10 +61,8 @@ public class SodiumOptionsGUI extends ScrollableGuiScreen {
         this.pages.add(SodiumGameOptionPages.advanced());
         this.pages.add(SodiumGameOptionPages.performance());
 
-        if (AngelicaConfig.enableIris) {
-            shaderPacks = new OptionPage(I18n.format("options.iris.shaderPackSelection"), ImmutableList.of());
-            this.pages.add(shaderPacks);
-        }
+        shaderPacks = new OptionPage(I18n.format("options.iris.shaderPackSelection"), ImmutableList.of());
+        this.pages.add(shaderPacks);
     }
 
     public void setPage(OptionPage page) {

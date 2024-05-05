@@ -43,15 +43,13 @@ public class AngelicaTweaker implements IFMLLoadingPlugin, IEarlyMixinLoader {
             LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
             Configuration config = ctx.getConfiguration();
             LoggerConfig loggerConfig = config.getLoggerConfig(LogManager.ROOT_LOGGER_NAME);
-            if (AngelicaConfig.enableDebugLogging) {
-                loggerConfig.setLevel(Level.DEBUG);
-            }
+            loggerConfig.setLevel(Level.DEBUG)
             ctx.updateLoggers();
 
             // Too many bug reports because people refuse to read or just want to try it - so make these only able
             // to be enabled by system properties for now.
-            AngelicaConfig.enableIris = Boolean.parseBoolean("true");
-            AngelicaConfig.enableMCPatcherForgeFeatures = Boolean.parseBoolean(System.getProperty("angelica.enableMCPatcherForgeFeatures", "false"));
+            AngelicaConfig.enableIris = true;
+            AngelicaConfig.enableMCPatcherForgeFeatures = true;
 
             // Debug features
             AngelicaConfig.enableTestBlocks = Boolean.parseBoolean(System.getProperty("angelica.enableTestBlocks", "false"));

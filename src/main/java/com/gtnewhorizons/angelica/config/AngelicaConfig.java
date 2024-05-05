@@ -32,12 +32,12 @@ public class AngelicaConfig {
     public static boolean enableTestBlocks;
 
     @Config.Comment("Enable Iris Shaders [Requires Sodium]")
-    @Config.DefaultBoolean(false)
+    @Config.DefaultBoolean(true)
     @Config.RequiresMcRestart
     public static boolean enableIris;
 
     @Config.Comment("Enable MCPatcherForge features, still in Alpha. Individual features are toggled in mcpatcher.json")
-    @Config.DefaultBoolean(false)
+    @Config.DefaultBoolean(true)
     @Config.RequiresMcRestart
     public static boolean enableMCPatcherForgeFeatures;
 
